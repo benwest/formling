@@ -1,0 +1,10 @@
+.pagination {
+  margin-bottom: 1em;
+  ul li {
+    display: inline-block;
+  }
+}
+
+.current-page {
+  text-decoration: underline;
+}

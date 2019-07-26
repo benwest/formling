@@ -1,0 +1,5 @@
+title: News page
+preset: page
+pages: true
+  template: "news-item"
+fields:

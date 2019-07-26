@@ -1,0 +1,20 @@
+.layout {
+  display: flex;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  flex-wrap: wrap;
+  @include medium {
+    flex-wrap: nowrap;
+  }
+  &__sidebar {
+    width: 100%;
+    @include medium {
+      width: 330px;
+      flex-shrink: 0;
+      padding-right: var(--gutter);
+    }
+  }
+  &__main {
+    flex-grow: 1;
+  }
+}

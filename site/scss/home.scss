@@ -1,0 +1,6 @@
+.home {
+  display: none;
+  @include medium {
+    display: flex;
+  }
+}

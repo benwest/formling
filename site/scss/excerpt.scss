@@ -1,0 +1,27 @@
+.excerpt {
+  &__text {
+    font-family: 'celaraz';
+    font-size: 30px;
+    @include medium {
+      font-size: 40px;
+    }
+    @include large {
+      font-size: 50px;
+    }
+    @include xlarge {
+      font-size: 60px;
+    }
+  }
+  &__title {
+    display: inline-block;
+  }
+  &__cover {
+    height: 1em;
+    top: .25em;
+    margin-left: .1em;
+    margin-right: .1em;
+  }
+  &__sizer {
+    color: transparent;
+  }
+}

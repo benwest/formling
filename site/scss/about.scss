@@ -1,0 +1,9 @@
+.about {
+  display: none;
+  opacity: 0;
+  padding-bottom: 1em;
+  transition: opacity 250ms ease-in-out;
+  &.reveal {
+    opacity: 1;
+  }
+}

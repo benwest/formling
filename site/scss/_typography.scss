@@ -1,0 +1,20 @@
+:root {
+    --line-height: 1.2;
+    --line: calc( var( --line-height ) * 1rem );
+}
+
+html {
+    line-height: var( --line-height );
+}
+
+em {
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'celaraz';
+    src: url('../fonts/celaraztrial-regular-webfont.woff2') format('woff2'),
+         url('../fonts/celaraztrial-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

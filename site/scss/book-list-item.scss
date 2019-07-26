@@ -1,0 +1,10 @@
+.book-list-item {
+  display: flex;
+  &__cover {
+    width: calc( var( --line ) * 3 );
+    img {
+      height: calc( var( --line ) * 3 );
+      float: right;
+    }
+  }
+}

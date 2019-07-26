@@ -1,0 +1,17 @@
+Title: Formling
+
+----
+
+Sitedescription:
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lectus dolor, vulputate ac ante ut, varius ultrices lorem. Morbi consequat, eros ac commodo pretium, lorem nisl posuere libero, ut malesuada lorem risus finibus justo. Donec ut nisi sodales, mollis lorem vel, vulputate augue. Nulla facilisi. Pellentesque bibendum faucibus arcu. Ut condimentum interdum nulla a laoreet. Aliquam eget nunc non massa rutrum dictum vitae a elit.
+
+emile@formling.xyz
+
+----
+
+Backgroundcolor: #D4D4D4
+
+----
+
+Textcolor: #D82220

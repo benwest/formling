@@ -1,0 +1,11 @@
+.nav {
+  &__logo {
+    svg {
+      width: 100%;
+      height: auto;
+      path {
+        fill: var( --text-color );
+      }
+    }
+  }
+}

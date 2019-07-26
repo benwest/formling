@@ -1,0 +1,14 @@
+.book-list {
+  display: none;
+  .page--home & {
+    display: flex;
+  }
+  @include medium {
+    display: flex;
+  }
+  &__excerpt {
+    @include medium {
+      display: none;
+    }
+  }
+}

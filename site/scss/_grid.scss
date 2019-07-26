@@ -1,0 +1,66 @@
+:root {
+    --gutter: 10px;
+    @include medium {
+        --gutter: 14px;
+    }
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: calc( var( --gutter ) / 2 );
+    padding-right: calc( var( --gutter ) / 2 );
+    & > [class*="-col-"] {
+        padding-left: calc( var( --gutter ) / 2 );
+        padding-right: calc( var( --gutter ) / 2 );
+    }
+    &--fill {
+        padding-left: 0;
+        padding-right: 0;
+        & > [class*="-col-"] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+
+[class*="-col-"] {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+@mixin columns ( $prefix ) {
+    @for $i from 1 through 12 {
+        .#{ $prefix }-col-#{ $i } {
+            width: 100% * $i / 12;
+        }
+    }
+}
+
+@mixin offsets ( $prefix ) {
+    @for $i from 0 through 11 {
+        .#{ $prefix }-off-#{ $i } {
+            margin-left: 100% * $i / 12;
+        }
+    }
+}
+
+@mixin grid ( $prefix ) {
+    @include columns ( $prefix );
+    @include offsets ( $prefix );
+}
+
+@include grid( 's' );
+@include medium {
+    @include grid( 'm' );
+}
+@include large {
+    @include grid( 'l' );
+}
+@include xlarge {
+    @include grid( 'xl' );
+}
+@include xxlarge {
+    @include grid( 'xxl' );
+}

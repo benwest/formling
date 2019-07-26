@@ -1,0 +1,9 @@
+title: Home Page
+preset: page
+files: false
+fields:
+  text:
+    label: Text
+    type: textarea
+    size: large
+

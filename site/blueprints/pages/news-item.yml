@@ -1,0 +1,20 @@
+title: News item
+pages: false
+preset: page
+fields:
+  imageFiles:
+    label: Image
+    type: files
+    options: images
+    width: 1/2
+  date:
+    label: Date
+    type: date
+    default: now
+    width: 1/2
+  text:
+    label: Textd
+    type: textarea
+    size: large
+    
+

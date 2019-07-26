@@ -1,0 +1,12 @@
+.slider {
+  width: 100%;
+  overflow: hidden;
+  cursor: e-resize;
+  &__track {
+    display: flex;
+    transition: transform .2s;
+  }
+  &__image {
+    object-position: top left;
+  }
+}
