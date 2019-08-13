@@ -8,4 +8,11 @@
       }
     }
   }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    @include medium {
+      display: initial;
+    }
+  }
 }

@@ -37,8 +37,12 @@ $_reset-form-transition: border .66s ease;
 
 @mixin input-reset {
     background: palette(form, background);
-    border-radius: 3px;
-    border: 1px solid palette(form, border);
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+
+    border: none;
+    border-bottom: 1px solid palette(form, border);
     box-sizing: border-box;
     color: palette(form, color);
     display: block;
@@ -46,12 +50,14 @@ $_reset-form-transition: border .66s ease;
     height: auto;
     line-height: 18px;
     margin: 0;
-    padding: .571em .429em;
+    padding: 0em 0em 0.25em 0em;
     transition: $_reset-form-transition;
     width: 100%;
-
+    &:-webkit-autofill {
+        background: transparent;
+    }
     &:focus,
     &:hover {
-        border-color: palette(form, border--focus);
+        // border-color: palette(form, border--focus);
     }
 }

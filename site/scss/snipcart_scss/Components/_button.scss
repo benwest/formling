@@ -27,20 +27,21 @@ $_btn-size: 36px;
     color: palette(button, color);
     cursor: pointer;
     display: inline-block;
-    font-size: fontsize(button, base) / 1.2;
+    font-size: fontsize(button, base);
     height: $_btn-size;
     line-height: $_btn-size;
     outline: 0;
-    padding: 0 1em;
-    text-transform: uppercase;
+    // padding: 0 1em;
+    // text-transform: uppercase;
 
     &:hover {
         background-color: palette(button, background--hover);
+        text-decoration: underline;
     }
 
     @media #{$mq-medium} {
         font-size: fontsize(button, base);
-        padding: 0 2em;
+        // padding: 0 2em;
     }
 }
 

@@ -1,6 +1,21 @@
 .home {
-  display: none;
-  @include medium {
-    display: flex;
+  &__excerpt {
+    display: none;
+    .excerpt__text {
+      display: inline;
+    }
+    .excerpt__text:hover {
+      transition: opacity 250ms;
+      cursor: pointer;
+      font-style: italic;
+    }
+    @include medium {
+      display: flex;
+    }
+  }
+  &__list {
+    @include medium {
+      display: none;
+    }
   }
 }

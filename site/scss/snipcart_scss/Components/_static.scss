@@ -30,7 +30,8 @@ $_static-border: 1px solid palette(static, border);
     @include font-bold;
     color: palette(static, color--highlight);
     font-size: 1em;
-    text-transform: uppercase;
+    text-decoration: underline;
+    // text-transform: uppercase;
 }
 
 .snip-static__title--main {

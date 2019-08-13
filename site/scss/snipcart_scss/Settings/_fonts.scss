@@ -27,62 +27,117 @@ $font-base: Arial, sans-serif;
     - add your font-family. Ex: font-family: 'myFont-bold';
 */
 @mixin font-bold {
-    font-weight: 700;
+    // font-weight: 700;
 }
 
 
 /**
     FONT SIZES
 */
+// $fontsize: (
+//     action: (
+//         small: 12px
+//     ),
+//     button: (
+//         base: 12px
+//     ),
+//     error: (
+//         base: 14px
+//     ),
+//     flash: (
+//         base: 12px
+//     ),
+//     footer: (
+//         base: 10px
+//     ),
+//     form: (
+//         small: 12px,
+//         base: 14px
+//     ),
+//     header: (
+//         small: 14px,
+//         large: 30px
+//     ),
+//     product: (
+//         base: 14px,
+//         large: 20px,
+//         icon: 30px
+//     ),
+//     quantity-trigger: (
+//         large: 18px,
+//         x-large: 22px
+//     ),
+//     reset: (
+//         base: 14px,
+//         large: 16px
+//     ),
+//     static: (
+//         small: 12px,
+//         base: 14px
+//     ),
+//     step: (
+//         small: 10px,
+//         icon: 34px
+//     ),
+//     table: (
+//         small: 12px,
+//         base: 14px,
+//         large: 20px
+//     ),
+//     discount: (
+//         icon: 20px
+//     )
+// );
+
 $fontsize: (
     action: (
-        small: 12px
+        small: 1rem
     ),
     button: (
-        base: 12px
+        base: 1rem
     ),
     error: (
-        base: 14px
+        base: 1rem
     ),
     flash: (
-        base: 12px
+        base: 1rem
     ),
     footer: (
-        base: 10px
+        base: 0.8rem
     ),
     form: (
-        small: 12px,
-        base: 14px
+        small: 1rem,
+        base: 1rem
     ),
     header: (
-        small: 14px,
-        large: 30px
+        small: 1rem,
+        large: 1rem
     ),
     product: (
-        base: 14px,
-        large: 20px,
-        icon: 30px
+        base: 1rem,
+        large: 1rem,
+        icon: 20px
     ),
     quantity-trigger: (
-        large: 18px,
-        x-large: 22px
+        large: 1rem,
+        x-large: 1rem
     ),
     reset: (
-        base: 14px,
-        large: 16px
+        base: 1rem,
+        large: 1rem
     ),
     static: (
-        small: 12px,
-        base: 14px
+        small: 1rem,
+        base: 1rem
     ),
     step: (
-        small: 10px,
-        icon: 34px
+        small: 1rem,
+        icon: 20px
     ),
     table: (
-        small: 12px,
-        base: 14px,
-        large: 20px
+        small: 1rem,
+        base: 1rem,
+        large: 1rem
     ),
     discount: (
         icon: 20px

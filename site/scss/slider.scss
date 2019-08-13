@@ -9,4 +9,18 @@
   &__image {
     object-position: top left;
   }
+  &__pagination {
+    &__bullet{
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      // margin: 5px 5px 0px 0px;
+      background: transparent;
+      border: solid 1px var(--text-color);
+      &--active {
+        background: var( --text-color );
+      }
+    }
+  }
 }
+

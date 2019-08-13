@@ -1,5 +1,8 @@
 .book-list-item {
   display: flex;
+  &--forthcoming {
+    
+  }
   &__cover {
     width: calc( var( --line ) * 3 );
     img {

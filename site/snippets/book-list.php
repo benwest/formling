@@ -2,10 +2,6 @@
   <?php $index = 1; ?>
   <?php foreach ( $pages -> find('books') -> children() -> visible() as $book ) : ?>
       
-      <div class="s-col-12 book-list__excerpt">
-        <?= snippet( 'excerpt', [ 'book' => $book ] ) ?>
-      </div>
-      
       <?php ob_start() ?>
         <div class="book-list-item__cover">
           <div class="book-list-item__index">
@@ -30,11 +26,11 @@
       <?php $content = ob_get_contents(); ob_end_clean() ?>
       
       <?php if($book->forthcoming()->bool() == false): ?>
-        <a class="s-col-12 book-list-item s-pad-bottom-1" href="<?= $book -> url () ?>">
+        <a class="s-col-12 book-list-item s-pad-bottom-2" href="<?= $book -> url () ?>">
           <?= $content ?>
         </a>
       <?php else: ?>
-        <div class="s-col-12 book-list-item book-list-item--forthcoming s-pad-bottom-1">
+        <div class="s-col-12 book-list-item book-list-item--forthcoming s-pad-bottom-2">
           <?= $content ?>
         </div>
       <?php endif; ?>

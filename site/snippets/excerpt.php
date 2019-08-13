@@ -1,8 +1,8 @@
-<?php $sentence = extract_sentence( $book -> fullText() -> value() ) ?>
+<?php $sentence = extract_sentence( $book -> fullText() -> value(), isset( $maxLength ) ? $maxLength : 400 ) ?>
 
 <?php ob_start(); ?>
   <?php if ( isset( $title ) ) : ?>
-    <div class="excerpt__title">
+    <div class="excerpt__title s-pad-top-1 m-pad-top-0 m-pad-left-1">
       <em><?= $book -> title() ?></em><br>
       <?= $book -> author() ?>
     </div>

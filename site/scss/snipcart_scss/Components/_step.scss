@@ -23,6 +23,8 @@ $_steps-border: 1px solid palette(step, border);
     background: palette(step, background);
     display: block;
     height: $_steps-height / 1.25;
+    padding: 0 $padding-small;
+    // text-align: center;
 
     &.snip-steps--4 li {
         width: percentage(1 / 4);
@@ -55,6 +57,10 @@ $_steps-border: 1px solid palette(step, border);
     height: inherit;
     // [1]
     user-select: none;
+    // padding-left: 1em;
+   @media #{$mq-medium} {
+        padding-left: 1em;
+    }
 
     @supports (display: flex) {
         display: flex;
@@ -84,8 +90,8 @@ $_steps-border: 1px solid palette(step, border);
 .snip-step__nb {
     display: table-cell;
     font-size: fontsize(step, icon) / 1.25;
-    padding: 0 .25em;
-    text-align: center;
+    padding: 0 .25em 0 0;
+    // text-align: center;
     vertical-align: middle;
 
     @media #{$mq-medium} {
@@ -102,10 +108,10 @@ $_steps-border: 1px solid palette(step, border);
         font-size: fontsize(step, small);
         line-height: 16px;
         padding-right: .5em;
-        text-align: left;
-        text-transform: uppercase;
+        // text-align: center;
+        // text-transform: uppercase;
         vertical-align: middle;
-        width: 66.666666%;
+        width: 100%;
     }
 
     @media #{$mq-large} {

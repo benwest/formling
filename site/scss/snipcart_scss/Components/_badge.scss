@@ -14,7 +14,7 @@ $_btn-size: 36px;
 
 .snip-badge {
     @include font-bold;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     border-radius: 3px;
     padding: 0.5em;
     display: inline-block;

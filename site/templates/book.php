@@ -2,7 +2,7 @@
 
 <div class="grid">
   <div class="s-col-12 s-gap-bottom-2">
-    <?= snippet( 'excerpt', [ 'book' => $page, 'title' => true ] ) ?>
+    <?= snippet( 'excerpt', [ 'book' => $page, 'title' => true, 'maxLength' => 200 ] ) ?>
   </div>
   <?php if( $page -> bookImages() -> isNotEmpty() ) : ?>
     <div class="s-col-12 s-gap-bottom-2">
@@ -12,12 +12,12 @@
   <div class="s-col-12 m-col-6 s-gap-bottom-1">
     <?php foreach ( $page -> purchasingOptions() -> toStructure() as $option ): ?>
       <a href="#" 
-      class="snipcart-add-item purchase-option db s-gap-bottom-1"
-      data-item-id="<?= $page->slug() .'-'. Str::slug($option->name()) ?>"
-      data-item-name="<?= $page-> title() ?>: <?= $option->name() ?>"
-      data-item-price="<?= $option->price() ?>"
-      data-item-url="<?= $page->url() ?>"
-      data-item-description="<?= $page-> title() ?>: <?= $option->description() ?>"
+        class="snipcart-add-item purchase-option db s-gap-bottom-1"
+        data-item-id="<?= $page->slug() .'-'. Str::slug($option->name()) ?>"
+        data-item-name="<?= $page-> title() ?>: <?= $option->name() ?>"
+        data-item-price="<?= $option->price() ?>"
+        data-item-url="<?= $page->url() ?>"
+        data-item-description="<?= $option->description() ?>"
       >
         <div><?= $option -> price() ?>£</div>
         <div class="s-pad-left-2">

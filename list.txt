@@ -1,9 +1,13 @@
-– Mobile
+– [x] Mobile
 – Excerpts
-  – Homepage one
-  – Reloading book one
-  – Animation
+  – [x] Homepage one
+  – [x] Reloading book one
+  – [ ] Animation
+  - [ ] Scrolling
 – Forthcoming book
+- Image Loading
+  - Resized placeholders should be cropped to the correct ratio now, I think this is only on SLIDERS.
 – Snipcart
-  – Styling
+  – [x] Styling
+  - [ ] Configuration for Shipping + Taxes
   

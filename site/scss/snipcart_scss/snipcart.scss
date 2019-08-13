@@ -1,4 +1,4 @@
-﻿/**
+/**
     SNIPCART V2
 
     We strongly use BEM methodology
@@ -57,7 +57,7 @@ body.snip-open {
 
 // Base layout
 .snip-layout {
-    background: rgba(123, 123, 123, .75);
+    background: var(--background-color);
     bottom: 0;
     color: palette(layout, color);
     font-family: $font-base;
@@ -70,6 +70,12 @@ body.snip-open {
     right: 0;
     top: 0;
     z-index: $_base-z-index;
+    @include large {
+        padding-right: $padding-small;
+        left: 330px;
+        right: 0;
+    }
+
 
     // Compound settings and reset
     @import "./Settings/_icons.scss";
@@ -100,6 +106,6 @@ body.snip-open {
     // Responsive
     @media #{$mq-large} {
         font-size: fontsize(reset, large);
-        padding: $_base-padding;
+        // padding: $_base-padding;
     }
 }

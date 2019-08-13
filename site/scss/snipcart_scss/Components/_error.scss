@@ -32,7 +32,7 @@
     color: palette(error, text-color);
     margin: 1em 0;
     text-align: center;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 
 .snip-error__list {
@@ -52,5 +52,5 @@
 .snip-error__feedback {
     font-size: fontsize(error, base);
     text-align: center;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }

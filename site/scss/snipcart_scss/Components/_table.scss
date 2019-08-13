@@ -32,9 +32,11 @@ $_notice-error--text-color: palette(static, color--highlight);
 
     // [1]
     td, th, tr {
-        border-bottom: $_table-border;
         padding: inherit;
-
+        border-bottom: $_table-border;
+        @media #{$mq-medium} {
+            border-bottom: none;
+        }
         &.snip-table__row--no-border {
           border-bottom: none;
           td {
@@ -51,7 +53,7 @@ $_notice-error--text-color: palette(static, color--highlight);
 
     div {
       margin: 10px 20px 5px 20px;
-      padding: 10px;
+    //   padding: 10px;
       border-radius: 5px;
 
       &.snip-table__cell__notices--warning {
@@ -95,7 +97,7 @@ $_notice-error--text-color: palette(static, color--highlight);
 
         td {
             border: 0;
-            padding: $padding-small;
+            // padding: $padding-small;
         }
 
         .snip-table__header {
@@ -112,7 +114,7 @@ $_notice-error--text-color: palette(static, color--highlight);
             }
 
             ~ .snip-table__body {
-                border-top: $_table-border;
+                // border-top: $_table-border;
 
                 &:empty {
                     border: 0;
@@ -126,7 +128,7 @@ $_notice-error--text-color: palette(static, color--highlight);
 
             tr,
             td {
-                padding: .5em;
+                // padding: .5em;
                 text-align: inherit;
             }
         }
@@ -135,8 +137,8 @@ $_notice-error--text-color: palette(static, color--highlight);
 
 .snip-table__header {
     font-size: fontsize(table, small);
-    padding: 1em 2em;
-    text-transform: uppercase;
+    padding: $padding-small;
+    // text-transform: uppercase;
 
     ~ .snip-table__header {
         border-top: $_table-border;
@@ -146,14 +148,14 @@ $_notice-error--text-color: palette(static, color--highlight);
 .snip-table__body {
     border-top: $_table-border;
     display: table-row-group;
-    padding: 1.429em;
+    padding: $padding-small;
 }
 
 .snip-table__body--small {
     background: palette(table, background--highlight);
 
     @media #{$mq-medium} {
-        padding: .429em 1.429em .429em 2.857em;
+        // padding: .429em 1.429em .429em 1.429em;
     }
 }
 
@@ -161,7 +163,7 @@ $_notice-error--text-color: palette(static, color--highlight);
     font-size: fontsize(table, large);
 
     @media #{$mq-medium} {
-        padding: 1.222em 1.111em 1.222em 1.222em;
+        // padding: 1.222em 1.111em 1.222em 1.222em;
     }
 }
 
@@ -170,7 +172,7 @@ $_notice-error--text-color: palette(static, color--highlight);
     font-size: fontsize(table, base);
     color: palette(table, color--highlight);
     font-weight: bold;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 
 .snip-table__cell--center {
@@ -214,7 +216,7 @@ $_notice-error--text-color: palette(static, color--highlight);
 .snip-table__small-col {
     @media #{$mq-small} {
         float: left;
-        margin-top: $padding-small * 2;
+        // margin-top: $padding-small * 2;
         text-align: center;
         width: 33.333333%;
 

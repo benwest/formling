@@ -19,13 +19,13 @@ $_action-border: 1px solid palette(layout, border);
 
 .snip-actions {
     border-top: $_action-border;
-    padding: $padding-small;
+    padding: $padding-small 0;
 
     // [1]
     @include clearfix;
 
     @media #{$mq-medium} {
-        padding: $_action-pad;
+        padding: $padding-small;
     }
 }
 

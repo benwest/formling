@@ -1,0 +1,28 @@
+@mixin display ( $prefix ) {
+  .#{ $prefix }-dn {
+    display: none;
+  }
+  .#{ $prefix }-db {
+    display: block;
+  }
+  .#{ $prefix }-dib {
+    display: inline-block;
+  }
+  .#{ $prefix }-df {
+    display: flex;
+  }
+}
+
+@include display( 's' );
+@include medium {
+    @include display( 'm' );
+}
+@include large {
+    @include display( 'l' );
+}
+@include xlarge {
+    @include display( 'xl' );
+}
+@include xxlarge {
+    @include display( 'xxl' );
+}

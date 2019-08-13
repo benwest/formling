@@ -1,12 +1,16 @@
 <nav class="nav grid s-gap-bottom-1">
-    <div class="s-col-4 m-col-6">
+    <div class="s-col-12 m-col-6">
         <a href="<?= $site -> url() ?>" class="nav__logo">
-            <?= snippet('logo') ?>
+            <div class="s-dn m-db"> <?= snippet('logo') ?></div>
+            <div class="m-dn"><?= snippet('logo-landscape') ?></div>
         </a>
     </div>
-    <ul class="s-col-8 m-col-6 s-gap-top-1">
+    <ul class="nav__list s-col-12 m-col-6 s-gap-top-1">
         <li>
             <a id="about-button" href="/about">About</a>
+        </li>
+        <li class="m-dn">
+            <a href="/books">Books</a>
         </li>
         <li>
             <a href="/news">News</a>

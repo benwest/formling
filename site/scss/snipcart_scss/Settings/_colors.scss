@@ -9,22 +9,22 @@
 
 $palettes: (
     action: (
-        link: #999
+        link: var(--background-color)
     ),
     button: (
-        background: #555,
-        background--highlight: #efe778,
-        background--hover: darken(#555, 10%),
-        background--danger: #f10,
-        background--danger-hover: darken(#f10, 10%),
-        background--highlight-hover: darken(#efe778, 10%),
-        color: #fff,
-        color--highlight: #222,
+        background: var(--background-color),
+        background--highlight: var(--background-color),
+        background--hover: var(--background-color),
+        background--danger: var(--background-color),
+        background--danger-hover: var(--background-color),
+        background--highlight-hover: var(--background-color),
+        color: var(--text-color),
+        color--highlight: var(--text-color),
     ),
     error: (
-        color: #f10,
-        text-color: #333,
-        text-color--invert: #fff
+        color: var(--text-color),
+        text-color: var(--background-color),
+        text-color--invert: var(--background-color),
     ),
     badge: (
         background--success: #76d443,
@@ -44,73 +44,73 @@ $palettes: (
         color--invert: #fff
     ),
     footer: (
-        background: #222,
-        color: #555,
-        color--highlight: #999
+        background: var(--background-color),
+        color: var(--text-color),
+        color--highlight: var(--text-color),
     ),
     form: (
-        background: #fff,
-        border: #eee,
-        border--focus: #333,
-        color: #555,
-        color--highlight: #333,
-        label-color: #999
+        background: var(--background-color),
+        border: var(--text-color),
+        border--focus: var(--text-color),
+        color: var(--text-color),
+        color--highlight: var(--text-color),
+        label-color: var(--text-color)
     ),
     header: (
-        background: #222,
-        background--highlight: #111,
-        color: #fff,
-        label-color: #999
+        background: var(--background-color),
+        background--highlight: var(--background-color),
+        color: var(--text-color),
+        label-color: #var(--text-color)
     ),
     layout: (
-        background: #fff,
-        border: #eee,
-        close-color: #fff,
-        color: #999,
-        content-background: #f8f8f8,
-        content-border: #bbb,
-        loading-color: #333
+        background: var(--background-color),
+        border: transparent,
+        close-color: var(--text-color),
+        color: var(--text-color),
+        content-background: var(--background-color),
+        content-border: transparent,
+        loading-color: var(--background-color)
     ),
     loader: (
-        background: #222,
-        background--highlight: #efe778
+        background: var(--background-color),
+        background--highlight:  var(--text-color)
     ),
     product: (
         background: #f8f8f8,
         border: #eee,
         color--error: #f10,
-        color--highlight: #333
+        color--highlight: var(--text-color)
     ),
     quantity-trigger: (
-        background: #ccc,
-        background--hover: #efe778,
-        background--disabled: #eee,
-        color: #111,
+        background: var(--background-color),
+        background--hover: var(--background-color),
+        background--disabled: var(--background-color),
+        color: var(--text-color),
         color--disabled: #bbb
     ),
     static: (
         background--highlight: #f8f8f8,
-        border: #eee,
-        color--highlight: #333,
+        border: transparent,
+        color--highlight: var(--text-color),
         color--link: #999
     ),
     step: (
-        background: #ccc,
-        background--active: #fff,
-        border: #bbb,
-        color: #999,
-        color--active: #333
+        background: var(--background-color),
+        background--active: var(--background-color),
+        border: var(--text-color),
+        color: var(--text-color),
+        color--active: var(--text-color)
     ),
     table: (
-        background--highlight: #f8f8f8,
-        border: #eee,
-        color--highlight: #333,
-        color--success: #76d443
+        background--highlight: var(--background-color),
+        border: var(--text-color),
+        color--highlight: var(--text-color),
+        color--success: var(--text-color)
     ),
     tooltip: (
-        background: #ccc,
-        border: #ccc transparent,
-        label: #555,
-        text: #111
+        background: var(--background-color),
+        border: var(--text-color) transparent,
+        label: var(--text-color),
+        text: var(--text-color)
     )
 );

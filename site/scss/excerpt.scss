@@ -1,7 +1,19 @@
 .excerpt {
+  opacity: 0;
+  &--single {
+    cursor: pointer;
+    &:hover {
+      font-style: italic;
+    }
+  }
+  &--ready {
+    opacity: 1;
+  }
   &__text {
+    display: inline;
     font-family: 'celaraz';
     font-size: 30px;
+    line-height: 1.15;
     @include medium {
       font-size: 40px;
     }
@@ -13,15 +25,35 @@
     }
   }
   &__title {
-    display: inline-block;
+    @include medium {
+      display: inline-block;
+    }
   }
   &__cover {
-    height: 1em;
-    top: .25em;
-    margin-left: .1em;
-    margin-right: .1em;
+    white-space: nowrap;
+    img {
+      height: 1em;
+      top: .25em;
+      margin-left: .1em;
+      margin-right: .1em;
+      margin-top: -1em;
+    }
   }
   &__sizer {
     color: transparent;
+  }
+  &--typed {
+    animation: typed 600ms;
+  }
+
+}
+
+
+@keyframes typed {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

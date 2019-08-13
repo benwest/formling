@@ -47,7 +47,7 @@ $_form-border: 1px solid palette(form, border);
     font-size: fontsize(form, small);
     margin: 0 0 .5em 0;
     overflow: hidden;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     cursor: pointer;
 }
 
@@ -76,14 +76,18 @@ $_form-border: 1px solid palette(form, border);
 }
 
 .snip-form__error {
-    background: palette(error, color);
-    border-radius: 3px;
-    color: palette(error, text-color--invert);
-    font-size: fontsize(form, base);
-    padding: .357em;
-    text-align: center;
+    color: transparent;
+    height: 0;
+    line-height: 0;
+    font-size: fontsize(form, base)/1.25;
+    border-top: solid 5px var(--text-color);
+    padding: 0em 0em;
 }
 
 .snip-form__sq-input {
     @include input-reset;
+}
+
+.snip-layout select {
+    border-radius: 0px;
 }

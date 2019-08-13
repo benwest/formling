@@ -1,0 +1,5 @@
+title: Books
+preset: page
+pages: true
+  template: "book"
+fields:
