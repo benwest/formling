@@ -34,6 +34,11 @@
     <article>
       <?= $page -> description() -> kt() ?>
     </article>
+    <div class="grid">
+      <div class="s-col-2 m-col-3 l-col-2">
+        <?= snippet('creatures/random') ?>
+      </div>
+    </div>
   </div>
 </div>
 

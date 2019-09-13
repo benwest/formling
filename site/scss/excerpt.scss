@@ -1,46 +1,91 @@
 .excerpt {
   opacity: 0;
-  &--single {
-    cursor: pointer;
-    &:hover {
-      font-style: italic;
-    }
-  }
   &--ready {
     opacity: 1;
   }
   &__text {
     display: inline;
     font-family: 'celaraz';
-    font-size: 30px;
+    font-size: 28px;
+    pointer-events: auto;
     line-height: 1.15;
+    top: 0;
+    position: relative;
+    z-index: 99;
+    left: 0;
+    &:before, &:after {
+      opacity: 0;
+      transition: opacity .2s;
+      display: inline-block;
+      width: 1em;
+      position: relative;
+    }
+    &:before {
+      text-align: right;
+      margin-left: -1em;
+    }
+    &--bracket-1 {
+      &:before { content: '{' }
+      &:after { content: '}' }
+      &:before, &:after { top: -.1em }
+    }
+    &--bracket-2 {
+      &:before { content: '⟢' }
+      &:after { content: '⟣' }
+    }
+    &--bracket-3 {
+      &:before { content: '⧘ ' }
+      &:after { content: ' ⧙' }
+    }
+    &--bracket-4 {
+      &:before { content: '(' }
+      &:after { content: ')' }
+      &:before, &:after { top: -.08em }
+    }
+    
+    &:hover {
+      // opacity: 1;
+      cursor: pointer;
+      // text-decoration: underline;
+      &:before, &:after {
+        opacity: 1;
+      }
+      // text-shadow: 1px 1px 0px var(--background-color), 2px 2px 0px var(--text-color);
+      // top: -2px;
+      // left: -2px;
+    }
     @include medium {
-      font-size: 40px;
+      font-size: 36px;
+      // font-size: 28px;
     }
-    @include large {
-      font-size: 50px;
-    }
+    // @include large {
+    // }
     @include xlarge {
-      font-size: 60px;
+      font-size: 46px;
     }
+    // &:after {
+    //   content: ' ';
+    // }
   }
   &__title {
     @include medium {
       display: inline-block;
+      font-size: 1em;
     }
   }
   &__cover {
     white-space: nowrap;
+    font-size: .75em;
     img {
       height: 1em;
-      top: .25em;
-      margin-left: .1em;
+      margin-left: .5em;
       margin-right: .1em;
       margin-top: -1em;
     }
   }
   &__sizer {
-    color: transparent;
+    opacity: 0;
+    pointer-events: none;
   }
   &--typed {
     animation: typed 600ms;

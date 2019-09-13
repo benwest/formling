@@ -31,6 +31,9 @@ columns:
           description:
             label: Description
             type: textarea
+          blurb:
+            label: Blurb
+            type: textarea
           purchasingOptions:
             label: Purchasing Options
             type: structure

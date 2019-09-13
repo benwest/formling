@@ -1,4 +1,5 @@
 import { bindImage } from './image';
+import { random } from 'lodash';
 
 var wait = delay => new Promise( resolve => setTimeout( resolve, delay ) );
 let containsMultiple = false;
@@ -46,6 +47,7 @@ var typeInto = ( el, text, onDone = () => {} ) => {
 var createSentenceEl = url => {
   var el = document.createElement( url ? 'a' : 'div' );
   el.classList.add( 'excerpt__text' );
+  el.classList.add( `excerpt__text--bracket-${ random( 1, 4 ) }`)
   if ( url ) el.href = url;
   return el;
 }
@@ -57,31 +59,15 @@ var createCoverEl = ({ ratio, srcset }) => {
   img.dataset.srcset = srcset;
   img.style.width = ( 1 / ratio ) + 'em';
   bindImage( img );
-  el.appendChild( document.createTextNode(' (') );
   el.appendChild( img );
-  el.appendChild( document.createTextNode(') ') );
   return el;
 }
 
 
-const checkTextFit = (el) => {
-  var mobileCheckHeight = window.innerHeight - (document.querySelector('.layout__sidebar').offsetHeight + 50);
-  var desktopCheckHeight = window.innerHeight - 50;
-  
-  if (window.innerWidth > 768) {
-    if (el.offsetHeight > desktopCheckHeight) {
-     return false;
-    }
-  } else {
-    if (el.offsetHeight > mobileCheckHeight) {
-     return false;
-    }
-  }
-  return true;
-}
+const layoutMain = document.querySelector('.layout__main')
+const checkTextFit = el => el.offsetHeight < layoutMain.offsetHeight;
 
-
-
+let returnOnNext = false;
 [ ...document.querySelectorAll( '.excerpt--multiple' ) ].forEach( el => {
   
   if (!containsMultiple) {
@@ -100,19 +86,29 @@ const checkTextFit = (el) => {
   var nextSentence = () => fetch( url )
     .then( r => r.json() )
     .then( ({ text, url, cover }) => {
+      let formling = document.querySelector('.formling--excerpt');
+      formling.remove();
+      formling.style.opacity = '1';
       var sentenceEl = createSentenceEl( url );
       var span = document.createElement( 'span' );
       sentenceEl.appendChild( span );
       sentenceEl.appendChild( createCoverEl( cover ) );
       el.appendChild( sentenceEl );
+      sentenceEl.appendChild(formling);
       span.innerText = text;
-
-      if (!checkTextFit(el) && !textExcerpt.classList.contains('slow-down')) {
-        span.innerText = '';
-        sentenceEl.remove();
+      
+      if (returnOnNext) {
+        returnOnNext = false;
         el.innerHTML = "";
         return;
       }
+
+      if (!checkTextFit(el) && !textExcerpt.classList.contains('slow-down')) {
+        sentenceEl.style.display = 'none';
+        returnOnNext = true;
+      }
+      
+
       
       return new Promise( resolve => typeInto( span, text, resolve ) );
     })
