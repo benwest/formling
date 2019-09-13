@@ -20718,15 +20718,15 @@ var returnOnNext = false;
       var text = _ref2.text,
           url = _ref2.url,
           cover = _ref2.cover;
-      var formling = document.querySelector('.formling--excerpt');
-      formling.remove();
-      formling.style.opacity = '1';
+      // let formling = document.querySelector('.formling--excerpt');
+      // formling.remove();
+      // formling.style.opacity = '1';
       var sentenceEl = createSentenceEl(url);
       var span = document.createElement('span');
       sentenceEl.appendChild(span);
       sentenceEl.appendChild(createCoverEl(cover));
-      el.appendChild(sentenceEl);
-      sentenceEl.appendChild(formling);
+      el.appendChild(sentenceEl); // sentenceEl.appendChild(formling);
+
       span.innerText = text;
 
       if (returnOnNext) {

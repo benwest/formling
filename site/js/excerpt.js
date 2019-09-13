@@ -86,15 +86,15 @@ let returnOnNext = false;
   var nextSentence = () => fetch( url )
     .then( r => r.json() )
     .then( ({ text, url, cover }) => {
-      let formling = document.querySelector('.formling--excerpt');
-      formling.remove();
-      formling.style.opacity = '1';
+      // let formling = document.querySelector('.formling--excerpt');
+      // formling.remove();
+      // formling.style.opacity = '1';
       var sentenceEl = createSentenceEl( url );
       var span = document.createElement( 'span' );
       sentenceEl.appendChild( span );
       sentenceEl.appendChild( createCoverEl( cover ) );
       el.appendChild( sentenceEl );
-      sentenceEl.appendChild(formling);
+      // sentenceEl.appendChild(formling);
       span.innerText = text;
       
       if (returnOnNext) {
