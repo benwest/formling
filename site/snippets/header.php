@@ -19,7 +19,9 @@
     <div class="layout__sidebar">
       <?= snippet( 'nav' ) ?>
       <div class="s-dn m-db">
-        <?= snippet( 'book-list' ) ?>
+        <?php if ( $page -> intendedTemplate() != 'books' ) : ?>
+          <?= snippet( 'book-list' ) ?>
+        <?php endif; ?>
       </div>
     </div>
     <div class="layout__main">

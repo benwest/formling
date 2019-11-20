@@ -47,7 +47,7 @@ var typeInto = ( el, text, onDone = () => {} ) => {
 var createSentenceEl = url => {
   var el = document.createElement( url ? 'a' : 'div' );
   el.classList.add( 'excerpt__text' );
-  el.classList.add( `excerpt__text--bracket-${ random( 1, 4 ) }`)
+  el.classList.add( `excerpt__text--bracket-${ random( 4, 4 ) }`)
   if ( url ) el.href = url;
   return el;
 }

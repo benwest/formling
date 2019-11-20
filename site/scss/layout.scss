@@ -12,9 +12,12 @@
   &__sidebar {
     width: 100%;
     @include medium {
-      width: 330px;
+      width: 280px;
       flex-shrink: 0;
       padding-right: var(--gutter);
+    }
+    @include large {
+      width: 330px;
     }
   }
   &__main {

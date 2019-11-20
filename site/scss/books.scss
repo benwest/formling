@@ -1,4 +1,8 @@
 .books {
+  &__cover {
+    object-fit: contain;
+    object-position: center bottom;
+  }
   &__blurb {
   }
 }
