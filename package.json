@@ -19,7 +19,7 @@
     "parcel-bundler": "^1.12.3",
     "picturefill": "^3.0.3",
     "resize-observer-polyfill": "^1.5.1",
-    "swiper": "^4.5.0"
+    "swiper": "^6.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
